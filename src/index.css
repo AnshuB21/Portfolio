@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer components {
   .align-element {
     @apply mx-auto max-w-7xl px-8;
   }
 }
 /* Css for the Contact form */
-.Beforeform {
+.Beforehand {
   display: flex;
   justify-content: center;
 }
@@ -55,5 +59,111 @@ form input[type="submit"]:hover {
   background-color: #e63e00;
 }
 body {
-  background-color: rgba(50, 46, 46, 0.363);
+  background-color: rgba(255, 255, 255, 0.79);
+}
+/* Main Experience Section */
+.experience-section {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin-right: 2rem;
+}
+
+/* Timeline Line */
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 4px;
+  height: 100%;
+  background-color: #0077b6; /* Blue line */
+}
+
+/* Individual Experience Item */
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  top: 1rem;
+  margin-top: 1rem;
+  width: 16px;
+  right: 16px;
+  height: 16px;
+  background-color: #0077b6; /* Blue dot */
+  border: 3px solid white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Experience Card */
+.experience-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-left: 30px;
+  flex-grow: 1;
+  position: relative;
+}
+.experience-card:hover {
+  box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.308);
+  cursor: pointer;
+}
+
+/* Card Title and Details */
+.experience-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: #555;
+}
+
+.experience-date-location {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+/* Description (Collapsible) */
+.experience-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: rgba(0, 0, 0, 0.016);
+  border: none;
+  color: #0077b6;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-section::before {
+    left: 10px;
+  }
+  .timeline-dot {
+    left: 4px;
+  }
+  .experience-card {
+    margin-left: 20px;
+  }
 }

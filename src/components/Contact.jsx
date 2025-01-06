@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Img from "../assets/Logo.svg";
+import SectionTitle from "./SectionTitle";
+import { MdLocationPin } from "react-icons/md";
+import { FaLocationArrow, FaMailBulk, FaMap } from "react-icons/fa";
 const Contact = () => {
   // Reference to the form element
   const formRef = useRef(null);
@@ -39,39 +42,62 @@ const Contact = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="sm:grid grid-cols-2 justify-center ">
-      <article className="hidden pl-5 md:block justify-center items-center m-14">
-        <img src={Img} className="h-80 lg:h-96" />
-      </article>
+    <>
+      <div className="mx-12" id="contact">
+        <SectionTitle text="Contact" />
+      </div>
+      <div className="sm:grid grid-cols-2 justify-center">
+        {/* Image Section */}
+        <article className="hidden pl-5 md:block justify-center items-center m-14">
+          <img src={Img} className="h-80 lg:h-96" alt="Contact" />
+        </article>
 
-      <section className="Beforeform">
-        <div className="containerr">
-          <form ref={formRef} onSubmit={handleSubmit} name="contact-form">
-            <h4>Contact Me</h4>
-            <input type="text" name="your-name" placeholder="Name" required />
-            <input
-              type="text"
-              name="your-number"
-              placeholder="Number"
-              required
-            />
-            <input
-              type="email"
-              name="your-email"
-              placeholder="Email"
-              required
-            />
-            <textarea
-              name="message"
-              rows="7"
-              placeholder="Your Message"
-              required
-            ></textarea>
-            <input type="submit" value="Submit" id="submit" />
-          </form>
+        {/* Contact Form Section */}
+        <div>
+          <section className="Beforehand ">
+            <div className="containerr">
+              <form ref={formRef} onSubmit={handleSubmit} name="contact-form">
+                <h4>Contact Me</h4>
+                <input
+                  type="text"
+                  name="your-name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="text"
+                  name="your-number"
+                  placeholder="Number"
+                  required
+                />
+                <input
+                  type="email"
+                  name="your-email"
+                  placeholder="Email"
+                  required
+                />
+                <textarea
+                  name="message"
+                  rows="7"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <input type="submit" value="Submit" id="submit" />
+              </form>
+            </div>
+          </section>
+          {/* Email and Icon Section */}
+          <div className="flex justify-center items-center mx-auto mt-7 space-x-3">
+            <FaMailBulk className="text-3xl mb-2" />
+            <h3 className="underline">Chettrianshu3@gmail.com</h3>
+          </div>
+          <div className="flex justify-center items-center mx-auto mt-5 mb-7 space-x-3">
+            <MdLocationPin className="text-3xl " />
+            <h3> Atlanta-30324, GA, USA</h3>
+          </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
 };
 

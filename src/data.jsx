@@ -82,3 +82,23 @@ export const projects = [
     text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.",
   },
 ];
+export const experience = [
+  {
+    id: nanoid(),
+    title: "Graduate Teaching Assitant",
+    company: "Georgia State University",
+    date: "August 2024 - Present ",
+    location: " Atlanta, USA",
+    description:
+      "GTA for Computer organization and programming, Theoretical Foundation of Computer Science. Graded quizzes, assignments, and exams, Guide students with their lab work, Communicate and guide students. ",
+  },
+  {
+    id: nanoid(),
+    title: "Analyst/ Software Engineer",
+    company: "Capgemini Services limited, India",
+    date: "December 2022 - June 2024",
+    location: "Banglore, India",
+    description:
+      "Application Performance Enhancement: Worked with cross-functional teams to resolve critical issues in web applications, achieving a 10% improvement in load times and contributing to a seamless user experience.Continuous Integration & Project Tracking: Utilized Jenkins and JIRA to streamline deployment processes and track project progress, ",
+  },
+];

@@ -1,17 +1,35 @@
-import aboutSvg from '../assets/about.svg';
-import SectionTitle from './SectionTitle';
+import aboutSvg from "../assets/about.svg";
+import Profile from "../assets/Profile.jpeg";
+import SectionTitle from "./SectionTitle";
 const About = () => {
   return (
-    <section className='bg-white py-20' id='about'>
-      <div className='align-element grid md:grid-cols-2 items-center gap-16'>
-        <img src={aboutSvg} className='w-full h-64' />
+    <section className="bg-white py-20" id="about">
+      <div className="align-element grid gap-16 md:grid-cols-[30%_60%] items-center text-center md:text-left">
+        {/* Profile Image */}
+        <img
+          src={Profile}
+          className="h-64 rounded mx-auto md:mx-0"
+          alt="Profile"
+        />
+
+        {/* Article Section */}
         <article>
-          <SectionTitle text='code and coffee' />
-          <p className='text-slate-600 mt-8 leading-loose'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-            maiores itaque doloribus asperiores dolorum quas voluptates
-            distinctio, porro beatae quam provident libero animi totam,
-            praesentium voluptatem corrupti dignissimos ipsum accusantium!
+          <SectionTitle text="About" />
+          <p className="text-slate-600 mt-8 leading-loose">
+            <span className="text-blue-500">Graduate Computer Science</span>{" "}
+            student thrives on exploring new concepts and technologies, and
+            constantly seeks opportunities to expand skills and knowledge.
+            Experienced in{" "}
+            <span className="text-blue-500">software development</span> using
+            Java and JavaScript, along with their libraries and frameworks.
+            Currently serving as a{" "}
+            <span className="text-blue-500">Graduate Teaching Assistant,</span>{" "}
+            supporting undergraduate students with lab tasks, grading reports,
+            and fostering a collaborative learning environment. Beyond
+            programming and development, I enjoy creating engaging content for
+            social platforms and immersing myself in fantasy literature. Always
+            eager to explore innovative solutions and connect with like-minded
+            professionals.
           </p>
         </article>
       </div>
